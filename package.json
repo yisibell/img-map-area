@@ -1,6 +1,6 @@
 {
   "name": "img-map-area",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A tiny websocket client library.",
   "main": "dist/img-map-area.cjs.js",
   "module": "dist/img-map-area.esm.js",
