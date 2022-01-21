@@ -8,6 +8,7 @@ src/
 # linter formater
 .eslintignore
 .eslintrc.js
+.prettierrc
 
 # demo
 example/
