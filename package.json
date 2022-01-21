@@ -1,0 +1,49 @@
+{
+  "name": "img-map-area",
+  "version": "1.0.0",
+  "description": "A tiny websocket client library.",
+  "main": "dist/img-map-area.cjs.js",
+  "module": "dist/img-map-area.esm.js",
+  "browser": "dist/img-map-area.umd.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "dev": "rollup -c -w",
+    "build": "rollup -c",
+    "release": "npm publish --access=public"
+  },
+  "keywords": [
+    "img",
+    "responsive",
+    "image-map-area"
+  ],
+  "author": {
+    "name": "elenh",
+    "email": "yisiwings@163.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yisibell/img-map-area.git"
+  },
+  "homepage": "https://github.com/yisibell/img-map-area",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^19.0.0",
+    "@rollup/plugin-node-resolve": "^13.0.0",
+    "@rollup/plugin-typescript": "^8.2.1",
+    "@typescript-eslint/eslint-plugin": "^5.10.0",
+    "@typescript-eslint/parser": "^5.10.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.7.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.5.1",
+    "rollup": "^2.48.0",
+    "rollup-plugin-dts": "^3.0.2",
+    "rollup-plugin-terser": "^7.0.2",
+    "tslib": "^2.2.0",
+    "typescript": "^4.2.4"
+  },
+  "engines": {
+    "node": ">= 12.x"
+  }
+}
