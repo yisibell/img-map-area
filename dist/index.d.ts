@@ -1,8 +1,10 @@
-declare function responsiveImgMapArea(imgEl: HTMLImageElement): void
-
 declare function getImageNaturalSize(imgEl: HTMLImageElement): {
   w: number
   h: number
 }
 
-export { getImageNaturalSize, responsiveImgMapArea };
+declare function responsiveImgMapArea(imgEl: HTMLImageElement): void
+
+declare function createImgMapAreaResponsiveListener(imgSelector?: string): void
+
+export { createImgMapAreaResponsiveListener, getImageNaturalSize, responsiveImgMapArea };

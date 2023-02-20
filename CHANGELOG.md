@@ -1,4 +1,16 @@
 # CHANGE LOG
+## v1.2.0
+
+
+### 🚀 Enhancements
+
+  - **api:** Add a built-in listener function to handle map area in the whole page (fd3fffb)
+  - **types:** Add createImgMapAreaResponsiveListener type definition (7616de3)
+
+### ❤️  Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v1.1.0
 
 
