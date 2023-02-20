@@ -2,6 +2,11 @@
 
 A library that makes Image Map Area responsive.
 
+# Features
+
+- One function to make **map area** responsive.
+- Support Typescript.
+
 # Installation
 
 ```bash
@@ -10,11 +15,16 @@ $ yarn add img-map-area
 
 # npm
 $ npm i img-map-area
+
+# pnpm
+$ pnpm add img-map-area
 ```
 
 # Usage
 
-1. 统一处理页面中的 `img map area`.
+## Example
+
+handling the **img map area** in the whole page:
 
 ```js
 // src/plugins/responsive-img-map-area.js
@@ -37,4 +47,6 @@ window.addEventListener('load', () => {
 })
 ```
 
-2. 应用到某个单独组件中。比如 `.vue` 或者 `React` 组件中。
+# CHANGE LOG
+
+see <a href="./CHANGELOG.md">CHANGE LOG</a>.

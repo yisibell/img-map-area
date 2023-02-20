@@ -1,15 +1,18 @@
 {
   "name": "img-map-area",
   "version": "1.0.1",
-  "description": "A tiny websocket client library.",
+  "description": "A library that makes Image Map Area responsive.",
   "main": "dist/img-map-area.cjs.js",
   "module": "dist/img-map-area.esm.js",
   "browser": "dist/img-map-area.umd.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "rollup -c -w",
     "build": "rollup -c",
-    "release": "npm publish --access=public"
+    "release": "npm run build && changelogen --release && npm publish --access=public && git push --follow-tags"
   },
   "keywords": [
     "img",
@@ -32,6 +35,7 @@
     "@rollup/plugin-typescript": "^8.2.1",
     "@typescript-eslint/eslint-plugin": "^5.10.0",
     "@typescript-eslint/parser": "^5.10.0",
+    "changelogen": "^0.4.1",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.7.0",
     "eslint-config-prettier": "^8.3.0",
@@ -44,6 +48,6 @@
     "typescript": "^4.2.4"
   },
   "engines": {
-    "node": ">= 12.x"
+    "node": ">=10.x"
   }
 }
