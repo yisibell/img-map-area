@@ -1,4 +1,15 @@
 # CHANGE LOG
+## v1.2.1
+
+
+### 📖 Documentation
+
+  - Update docs (a19cc57)
+
+### ❤️  Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v1.2.0
 
 
