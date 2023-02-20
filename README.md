@@ -47,10 +47,10 @@ window.addEventListener('load', () => {
 })
 ```
 
-Or, Just use `createImgMapAreaResponsiveListener` for above does.
+> Or, Just use `createImgMapAreaResponsiveListener` for above does.
 
-``` ts
-// src/plugins/responsive-img-map-area.ts
+``` js
+// src/plugins/responsive-img-map-area.js
 
 import { createImgMapAreaResponsiveListener } from 'img-map-area'
 
@@ -64,25 +64,25 @@ createImgMapAreaResponsiveListener()
 
 Handles a single img element, making the associated map area responsive.
 
-``` ts
+```js
 import { responsiveImgMapArea } from 'img-map-area'
 ```
 
 **parameters**
 
-- `imgEl`: `HTMLImageElement`.
+- **imgEl**: `HTMLImageElement`.
 
-1. `createImgMapAreaResponsiveListener`
+2. `createImgMapAreaResponsiveListener`
 
 Create a listener to make map area responsive.
 
-``` ts
+```js
 import { createImgMapAreaResponsiveListener } from 'img-map-area'
 ```
 
 **parameters**
 
-- `imgSelector`: A selector string, default is `.map-area-img`.
+- **imgSelector**: A selector string, default is `.map-area-img`.
 
 # CHANGE LOG
 
