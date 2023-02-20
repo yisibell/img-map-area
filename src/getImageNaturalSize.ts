@@ -1,5 +1,5 @@
 /**
- * 获取图片元素的原始大小
+ * Get image Natural size
  */
 const getImageNaturalSize = (imgEl: HTMLImageElement) => {
   const size = {

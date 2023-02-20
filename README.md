@@ -32,7 +32,7 @@ handling the **img map area** in the whole page:
 import { responsiveImgMapArea } from 'img-map-area'
 
 window.addEventListener('load', () => {
-  // .map-area-img 放置在想要进行 responsive 处理的 img 元素上
+  // Put .map-area-img selector in the <img /> element which will be responsive
   const elements = document.querySelectorAll('.map-area-img')
 
   const resizeHandler = () => {
@@ -46,6 +46,43 @@ window.addEventListener('load', () => {
   window.addEventListener('resize', resizeHandler)
 })
 ```
+
+Or, Just use `createImgMapAreaResponsiveListener` for above does.
+
+``` ts
+// src/plugins/responsive-img-map-area.ts
+
+import { createImgMapAreaResponsiveListener } from 'img-map-area'
+
+createImgMapAreaResponsiveListener()
+
+```
+
+# APIS
+
+1. `responsiveImgMapArea`
+
+Handles a single img element, making the associated map area responsive.
+
+``` ts
+import { responsiveImgMapArea } from 'img-map-area'
+```
+
+**parameters**
+
+- `imgEl`: `HTMLImageElement`.
+
+1. `createImgMapAreaResponsiveListener`
+
+Create a listener to make map area responsive.
+
+``` ts
+import { createImgMapAreaResponsiveListener } from 'img-map-area'
+```
+
+**parameters**
+
+- `imgSelector`: A selector string, default is `.map-area-img`.
 
 # CHANGE LOG
 
