@@ -1,3 +1,13 @@
+<p align="center">
+  <a href="https://www.npmjs.org/package/img-map-area">
+    <img src="https://img.shields.io/npm/v/img-map-area.svg">
+  </a>
+  <a href="https://npmcharts.com/compare/img-map-area?minimal=true">
+    <img src="https://img.shields.io/npm/dm/img-map-area.svg">
+  </a>
+  <br>
+</p>
+
 # img-map-area
 
 A library that makes Image Map Area responsive.
