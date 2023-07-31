@@ -1,4 +1,20 @@
 # CHANGE LOG
+## v1.3.0
+
+[compare changes](https://github.com/yisibell/img-map-area/compare/v1.2.1...v1.3.0)
+
+### 🚀 Enhancements
+
+- Refactor rollup to v3 ([d819797](https://github.com/yisibell/img-map-area/commit/d819797))
+
+### 🏡 Chore
+
+- **docs:** Add version badge ([91bd9e3](https://github.com/yisibell/img-map-area/commit/91bd9e3))
+
+### ❤️  Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v1.2.1
 
 
