@@ -1,1 +1,83 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var t=function(t){var e={w:0,h:0};if(t.naturalWidth)e.w=t.naturalWidth,e.h=t.naturalHeight;else{var r=new Image,i=t.getAttribute("src")||"";r.src=i,e.w=r.width,e.h=r.height}return e},e=function(e){if(e&&void 0!==e.getAttribute("usemap")){var r=Number.parseInt;e.addEventListener("load",(function(){var i=r(e.getAttribute("width")||"0"),a=r(e.getAttribute("height")||"0");if(!i||!a){var n=t(e);i||(i=n.w),a||(a=n.h)}var o=e.clientWidth/100,s=e.clientHeight/100,u=e.getAttribute("usemap"),c="string"==typeof u?u.replace("#",""):"";document.querySelectorAll('map[name="'+c+'"] area').forEach((function(t){var e=t.dataset;e.coords||(e.coords=t.getAttribute("coords")||"");for(var n=e.coords.split(",").map((function(t){return r(t)})),u=new Array(n.length),c=0;c<u.length;++c)u[c]=c%2==0?n[c]/i*100*o:n[c]/a*100*s;t.setAttribute("coords",u.toString())}))})),e.setAttribute("src",e.getAttribute("src")||"")}};exports.createImgMapAreaResponsiveListener=function(t){void 0===t&&(t=".map-area-img"),window.addEventListener("load",(function(){var r=document.querySelectorAll(t),i=function(){r.forEach((function(t){e(t)}))};i(),window.addEventListener("resize",i)}))},exports.getImageNaturalSize=t,exports.responsiveImgMapArea=e;
+'use strict';
+
+var getImageNaturalSize = function (imgEl) {
+    var size = {
+        w: 0,
+        h: 0,
+    };
+    if (imgEl.naturalWidth) {
+        size.w = imgEl.naturalWidth;
+        size.h = imgEl.naturalHeight;
+    }
+    else {
+        var temp = new Image();
+        var src = imgEl.getAttribute('src') || '';
+        temp.src = src;
+        size.w = temp.width;
+        size.h = temp.height;
+    }
+    return size;
+};
+
+var responsiveImgMapArea = function (imgEl) {
+    if (!imgEl)
+        return;
+    if (typeof imgEl.getAttribute('usemap') === 'undefined')
+        return;
+    var parseInt = Number.parseInt;
+    imgEl.addEventListener('load', function () {
+        var w = parseInt(imgEl.getAttribute('width') || '0');
+        var h = parseInt(imgEl.getAttribute('height') || '0');
+        if (!w || !h) {
+            var size = getImageNaturalSize(imgEl);
+            if (!w)
+                w = size.w;
+            if (!h)
+                h = size.h;
+        }
+        var wPercent = imgEl.clientWidth / 100;
+        var hPercent = imgEl.clientHeight / 100;
+        var mapNameAttr = imgEl.getAttribute('usemap');
+        var mapName = typeof mapNameAttr === 'string' ? mapNameAttr.replace('#', '') : '';
+        document
+            .querySelectorAll('map[name="' + mapName + '"] area')
+            .forEach(function (areaEl) {
+            var areaElDataset = areaEl.dataset;
+            if (!areaElDataset.coords) {
+                areaElDataset.coords = areaEl.getAttribute('coords') || '';
+            }
+            var coords = areaElDataset.coords
+                .split(',')
+                .map(function (str) { return parseInt(str); });
+            var coordsPercent = new Array(coords.length);
+            for (var i = 0; i < coordsPercent.length; ++i) {
+                if (i % 2 === 0) {
+                    coordsPercent[i] = (coords[i] / w) * 100 * wPercent;
+                }
+                else {
+                    coordsPercent[i] = (coords[i] / h) * 100 * hPercent;
+                }
+            }
+            areaEl.setAttribute('coords', coordsPercent.toString());
+        });
+    });
+    imgEl.setAttribute('src', imgEl.getAttribute('src') || '');
+};
+
+var createImgMapAreaResponsiveListener = function (imgSelector) {
+    if (imgSelector === void 0) { imgSelector = '.map-area-img'; }
+    window.addEventListener('load', function () {
+        var elements = document.querySelectorAll(imgSelector);
+        var resizeHandler = function () {
+            elements.forEach(function (imgEl) {
+                responsiveImgMapArea(imgEl);
+            });
+        };
+        resizeHandler();
+        window.addEventListener('resize', resizeHandler);
+    });
+};
+
+exports.createImgMapAreaResponsiveListener = createImgMapAreaResponsiveListener;
+exports.getImageNaturalSize = getImageNaturalSize;
+exports.responsiveImgMapArea = responsiveImgMapArea;

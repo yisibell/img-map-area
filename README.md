@@ -68,9 +68,9 @@ createImgMapAreaResponsiveListener()
 
 ```
 
-# APIS
+# APIs
 
-1. `responsiveImgMapArea`
+## `responsiveImgMapArea`
 
 Handles a single img element, making the associated map area responsive.
 
@@ -82,7 +82,7 @@ import { responsiveImgMapArea } from 'img-map-area'
 
 - **imgEl**: `HTMLImageElement`.
 
-2. `createImgMapAreaResponsiveListener`
+## `createImgMapAreaResponsiveListener`
 
 Create a listener to make map area responsive.
 
