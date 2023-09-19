@@ -9,13 +9,6 @@ var getImageNaturalSize = function (imgEl) {
         size.w = imgEl.naturalWidth;
         size.h = imgEl.naturalHeight;
     }
-    else {
-        var temp = new Image();
-        var src = imgEl.getAttribute('src') || '';
-        temp.src = src;
-        size.w = temp.width;
-        size.h = temp.height;
-    }
     return size;
 };
 
