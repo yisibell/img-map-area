@@ -1,4 +1,17 @@
 # CHANGE LOG
+## v1.4.0
+
+[compare changes](https://github.com/yisibell/img-map-area/compare/v1.3.0...v1.4.0)
+
+### 🚀 Enhancements
+
+- Upgrade `getImageNaturalSize` method ([62046a6](https://github.com/yisibell/img-map-area/commit/62046a6))
+- New release ([d5ea344](https://github.com/yisibell/img-map-area/commit/d5ea344))
+
+### ❤️  Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v1.3.0
 
 [compare changes](https://github.com/yisibell/img-map-area/compare/v1.2.1...v1.3.0)
