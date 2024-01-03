@@ -12,6 +12,8 @@
 
 A library that makes Image Map Area responsive.
 
+- [Release Notes](./CHANGELOG.md).
+
 # Features
 
 - One function to make **map area** responsive.
@@ -94,6 +96,4 @@ import { createImgMapAreaResponsiveListener } from 'img-map-area'
 
 - **imgSelector**: A selector string, default is `.map-area-img`.
 
-# CHANGE LOG
 
-see <a href="./CHANGELOG.md">CHANGE LOG</a>.
