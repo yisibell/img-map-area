@@ -1,6 +1,6 @@
 {
   "name": "img-map-area",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "A library that makes Image Map Area responsive.",
   "type": "module",
   "main": "dist/img-map-area.cjs.js",

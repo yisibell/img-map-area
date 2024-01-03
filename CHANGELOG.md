@@ -1,4 +1,16 @@
 # CHANGE LOG
+## v1.5.0
+
+[compare changes](https://github.com/yisibell/img-map-area/compare/v1.4.0...v1.5.0)
+
+### 🚀 Enhancements
+
+- Upgrade all deps to latest version ([c4333df](https://github.com/yisibell/img-map-area/commit/c4333df))
+
+### ❤️ Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v1.4.0
 
 [compare changes](https://github.com/yisibell/img-map-area/compare/v1.3.0...v1.4.0)
